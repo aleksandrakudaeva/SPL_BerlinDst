@@ -10,47 +10,47 @@ library(dplyr)
 #======================RUN HELPFULL FUNCTIONS ==================================
 # Use function from Malgorzata Olesiewitz
 DistricToFullName = function (column){
-  # Author: Malgorzata Olesiewitz
-  # Function re-names the districts of Berlin with their full names 
-  # without special signs. The function identifies the district by 
-  # three or four letters of its name. 
-  #
-  # Args:
-  #      column: vector or a column containing names of Berlin
-  #      districts.Name can have any form, special signs can be
-  #      use and additional information can be added to it. Vector 
-  #      must be character type.Only first 3-4letters need to be correct.  
-  #      
-  # Returns: 
-  #        Vector of replaced district names by its official names  
-  #        without special signs.  
-  
-  column[grepl("mit", column, 
-               ignore.case = TRUE)] = "Mitte" 
-  column[grepl("fri", column, 
-               ignore.case = TRUE)] = "Friedrichshain-Kreuzberg"
-  column[grepl("pank", column,
-               ignore.case = TRUE)] = "Pankow"
-  column[grepl("mar", column,
-               ignore.case = TRUE)] = "Marzahn-Hellersdorf" 
-  column[grepl("char", column,
-               ignore.case = TRUE)] = "Charlottenburg-Wilmersdorf"
-  column[grepl("spa", column,
-               ignore.case = TRUE)] = "Spandau" 
-  column[grepl("ste", column,
-               ignore.case = TRUE)] = "Steglitz-Zehlendorf"  
-  column[grepl("tem", column,
-               ignore.case = TRUE)] = "Tempelhof-Schoneberg" 
-  column[grepl("trep", column,
-               ignore.case = TRUE)] = "Treptow-Kopenick" 
-  column[grepl("neu", column,
-               ignore.case = TRUE)] = "Neukolln" 
-  column[grepl("lich", column,
-               ignore.case = TRUE)] = "Lichtenberg" 
-  column[grepl("rein", column,
-               ignore.case = TRUE)] = "Reinickendorf"
-  
-  return(column)
+    # Author: Malgorzata Olesiewitz
+    # Function re-names the districts of Berlin with their full names 
+    # without special signs. The function identifies the district by 
+    # three or four letters of its name. 
+    #
+    # Args:
+    #      column: vector or a column containing names of Berlin
+    #      districts.Name can have any form, special signs can be
+    #      use and additional information can be added to it. Vector 
+    #      must be character type.Only first 3-4letters need to be correct.  
+    #      
+    # Returns: 
+    #        Vector of replaced district names by its official names  
+    #        without special signs.  
+    
+    column[grepl("mit", column, 
+                 ignore.case = TRUE)] = "Mitte" 
+    column[grepl("fri", column, 
+                 ignore.case = TRUE)] = "Friedrichshain-Kreuzberg"
+    column[grepl("pank", column,
+                 ignore.case = TRUE)] = "Pankow"
+    column[grepl("mar", column,
+                 ignore.case = TRUE)] = "Marzahn-Hellersdorf" 
+    column[grepl("char", column,
+                 ignore.case = TRUE)] = "Charlottenburg-Wilmersdorf"
+    column[grepl("spa", column,
+                 ignore.case = TRUE)] = "Spandau" 
+    column[grepl("ste", column,
+                 ignore.case = TRUE)] = "Steglitz-Zehlendorf"  
+    column[grepl("tem", column,
+                 ignore.case = TRUE)] = "Tempelhof-Schoneberg" 
+    column[grepl("trep", column,
+                 ignore.case = TRUE)] = "Treptow-Kopenick" 
+    column[grepl("neu", column,
+                 ignore.case = TRUE)] = "Neukolln" 
+    column[grepl("lich", column,
+                 ignore.case = TRUE)] = "Lichtenberg" 
+    column[grepl("rein", column,
+                 ignore.case = TRUE)] = "Reinickendorf"
+    
+    return(column)
 }
 
 #================ READING IN ALL PREPARED DATA SETS ============================
